@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>normal table using DOM</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div id="wrapper">
+    <h2 >student's List</h2>
+    <table  id="data_table" >
+        <tr>
+            <th>Name</th>
+            <th>phone</th>
+            <th>Age</th>
+        </tr>
+        <tr id="row1">
+            <td id="name_row1">maryam rezayee</td>
+            <td id="phone_row1">09121258847</td>
+            <td id="age_row1">22</td>
+            <td>
+                <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+            </td>
+        </tr>
+        <tr id="row2">
+            <td id="name_row2">ali komijani</td>
+            <td id="phone_row2">09101582892</td>
+            <td id="age_row2">32</td>
+            <td>
+                <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+            </td>
+        </tr>
+        <tr id="row3">
+            <td id="name_row3">maryam ghasemi</td>
+            <td id="phone_row3">091925348534</td>
+            <td id="age_row3">23</td>
+            <td>
+                <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" id="new_name"></td>
+            <td><input type="text" id="new_phone"></td>
+            <td><input type="text" id="new_age"></td>
+            <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+        </tr>
+
+    </table>
+</div>
+<script src="js.js"></script>
+</body>
+</html>

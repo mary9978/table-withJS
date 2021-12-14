@@ -1,0 +1,101 @@
+@import "colors/color.css";
+@font-face {
+    font-family: "Lora";
+    src: url("../assets/fonts/Lora/0QIhMX1D_JOuMw_LIftL.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Encode Sans";
+    src: url("../assets/fonts/Encode Sans/c4mw1mF4GcnstG_Jh1QH6ac4hNLeNyeYUpKeDBNPVo0.woff2") format("woff2");
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: lora,"Encode Sans",sans-serif;
+    font-size: 1.2rem;
+}
+h2{
+    font-family: "Encode Sans",sans-serif;
+    margin: 2%;
+    box-shadow: 2px 2px var(--gray)
+}
+#wrapper{
+    overflow: auto;
+    border: 1px var(--light-pink);
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+table {
+    border-radius: 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--table-border);
+}
+th, td {
+    text-align: center;
+    padding: 16px;
+}
+
+th:first-child, td:first-child {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: var(--table-even-child-color);
+}
+input{
+    background-color: var(--input-color);
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 100px;
+}
+.edit,.save,.delete,.add{
+    border: none;
+    outline: none;
+    background-color: var(--button-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+.edit:hover,.save:hover,.delete:hover,.add:hover{
+    background-color: var(--button-color-hover);
+    transform: translate(5px);
+}
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    table, thead, tbody,  td, tr {
+        display: block;
+        text-align: left;
+    }
+    th{
+        display: none;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr { border: 1px solid #ccc; }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        white-space: nowrap;
+    }
+    tr:nth-child(even)  {
+       background-color: white;
+    }
+    tr:nth-child(odd){
+        background-color: var(--table-even-child-color);
+    }
+}
